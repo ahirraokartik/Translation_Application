@@ -9,26 +9,55 @@
     <script src="app.js"></script>
 </head>
 <body>
+        
+<header>
+
+<nav class="navigation container">
+            
+        <ul class="non-bullet nav-pills">
+            
+            <li class="list-inline">
+                    <a class="link" href="https://kartikahirrao.netlify.app/">About Me</a>
+            </li>
+            <li class="list-inline">
+                    <a class="link link-active" href="https://github.com/ahirraokartik/Translation_Application">Source</a>
+            </li>
+            <li class="list-inline">
+                    <a class="link" href="https://twitter.com/KartikAhirrao_">Connect</a>
+            </li>
+            </li>
+            <li class="list-inline">
+                <img src href="/"><img src="images/starwars.png" alt="logo" width="170" height="100"></img>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="https://en.wikipedia.org/wiki/Yoda">Yoda</a>
+        </li>
+        <li class="list-inline">
+                <a class="link link-active" href="https://www.youtube.com/watch?v=etxHSTmHCX4">Origins</a>
+        </li>
+        <li class="list-inline">
+                <a class="link" href="https://www.imdb.com/list/ls070150896/">Star Wars</a>
+        </li>
+            </ul>
+    </nav>
+
+</header>
+
 
     <section class="section background_image">
 
-    <h1>Translation App</h1>
    
-        <textarea class="text" id="txt-input" placeholder="Put your sentence here in english we will translate it to asgaurdian"></textarea>
+        <textarea class="text" id="txt-input" placeholder="Put your sentence here in English we will translate it to Yodish"></textarea>
   
        
-            <div class="LS">
+            <div class="LS" id="btn-translate">
                 <div class="lightsaber">
-                    <label for="yoda-example"></label>
+                    <label for="yoda-example"><p class="trans">Translate</p></label>
                     <input type="checkbox" id="yoda-example" checked="checked">
                     <div class="switch"></div>
                     <div class="plasma yoda"></div>
                 </div>
-            
             </div>
-
-
-        <button class="btn" id="btn-translate">Translate</button>
 
         <textarea class="translated" id="output"></textarea>
 

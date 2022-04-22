@@ -5,15 +5,75 @@ body
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     text-align: center;
+    background-image: url("images/yoda.jpg");
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 
 
 /**
-.center{
-   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 **/
+
+header {
+  /** display: flex; **/
+  justify-content: space-between;
+  align-items: center;
+ /** padding: 0px 9%; **/
+ /** background-color: black; **/
+}
+
+
+
+.navigation{
+  background-color: transparent;
+  color: white;
+  padding-left:5rem;
+  padding-right:5rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
+
+
+.non-bullet{
+    list-style: none;    
+    margin-bottom: 0rem;
+}
+
+.navigation .nav-pills{
+  text-align: center;
+  margin-top: 0;
+  padding-left: 7.5%;
+  list-style: none;
+  display: flex;
+}
+
+.list-inline{
+  display: inline;
+  padding: 0rem 1rem;
+  margin: 0;
+
+}
+
+.link{
+  margin: 0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
 
 .btn{
     font-size: 1rem;
@@ -31,8 +91,8 @@ body
 
 
 #output {
-    width: 50%;
-    height: 7vh;
+    width: 40%;
+    height: 4vh;
     display: inline-block;
     margin: 1.1rem;
     padding: 2rem;
@@ -43,6 +103,7 @@ body
     margin-top: 2rem;
 }
 
+/**
 .background_image{
     background-image: url("images/yoda.jpg");
     background-size: 100%;
@@ -50,6 +111,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+**/
 
 h1 {
     text-align: center;
@@ -62,8 +124,8 @@ h1 {
 }
 
 .text {
-    width: 50%;
-    height: 7vh;
+    width: 40%;
+    height: 3vh;
     display: inline-block;
     margin: 1.1rem;
     padding: 2rem;
@@ -72,26 +134,36 @@ h1 {
     border-top-right-radius: 1rem;
     margin-bottom: 1rem;
     margin-top: 2rem;
+    opacity: 0.6;
 }
+
+.translated {
+  opacity: 0.6;
+  padding-top:2rem;
+  
+}
+
 
 .LS{
-    margin-left: 80%;
+    margin-left: 30%;
     margin-top: 5%;
+    margin-bottom: 10%;
+    
 }
 
-.lightsaber { position: relative; }
+.lightsaber { position: absolute; }
 
 .lightsaber label {
 	cursor: pointer;
 	position: absolute;
-	bottom: 0;
+	/** bottom: 0; **/
 	left: 0;
 	z-index: 88;
-	text-indent: -9999px;
-	width: 15px;
-	height: 50px;
-	border-bottom: solid 4px grey;
-	border-top: solid 5px grey;
+	/**text-indent: -9999px;**/
+	width: 100px;
+	height: 24px;
+	border-left: solid 4px grey;
+	border-right: solid 5px grey;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -108,12 +180,12 @@ h1 {
 }
 
 .lightsaber .switch {
-	background: #B94A37;
-	width: 5px;
-	height: 10px;
+  background: #468847;
+	width: 10px;
+	height: 5px;
 	display: block;
 	position: absolute;
-	bottom: 25px;
+	bottom: 1px;
 	left: 13px;
 	transition: left 200ms;
 	-moz-transition: left 200ms;
@@ -142,14 +214,16 @@ h1 {
 .lightsaber .plasma {
 	transition: height 300ms,;
 	-moz-transition: height 300ms;
-	-webkit-transition: height 300ms;
+  margin-left:6rem;
+  margin-top:0.2rem;
+  padding-bottom: 0 0;
 	-o-transition: height 300ms;
 	-ms-transition: height 300ms;
 	border-radius: 12px 12px 0 0;
-	position: absolute;
-	bottom: 55px;
-	left: 2px;
-	width: 10px;
+	position: sticky;
+	bottom: 5px;
+	right: 800px;
+	width: 350px;
 	display: block;
 	filter: blur(1px);
 	-moz-filter: blur(1px);
@@ -161,17 +235,17 @@ h1 {
 
 
 .lightsaber input[type=checkbox]:checked ~ div.plasma {
-	height: 250px;
+	height: 16px;
 }
 
 .lightsaber input[type=checkbox]:hover ~ div.switch {
 	background: #c09853;
 	left: 12px;
 }
-
+/**
 .lightsaber input[type=checkbox]:checked ~ div.switch {
 	background: #468847;
-}
+}**/
 
 .yoda {
 	background: rgb(135,220,90); /* Old browsers */
@@ -199,165 +273,6 @@ h1 {
 	-ms-animation-iteration-count: infinite;
 }
 
-
-
-
-
-
-/** Lightsaber 
-
-
-.lightsaber {
-    margin-top: 25vh;
-    grid-column: 1 / -1;
-    position: relative;
-  }
-  
-  #on-off {
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-  
-  .hilt {
-    cursor: pointer;
-    display: block;
-    width: 0.75rem;
-    height: 7rem;
-    background-color: red;
-    border-radius: 0 0 4px 4px;
-    background-image: linear-gradient(
-      silver 0 10px,
-      hsl(39 75% 50%) 0 14px,
-      silver 0 15px,
-      black 0 20px,
-      silver 0 22px,
-      black 0 25px,
-      silver 0 27px,
-      black 0 30px,
-      silver 0 32px,
-      black 0 35px,
-      silver 0 37px,
-      black 0 40px,
-      silver 0 42px,
-      black 0 45px,
-      silver 0 47px,
-      black 0 50px,
-      silver 0 60px,
-      hsl(39 75% 50%) 60px 80px,
-      silver 0 100%
-    );
-  }
-  
-  .blade {
-    position: absolute;
-    background: white;
-    height: 350%;
-    width: 100%;
-    bottom: 100%;
-    border-radius: 100vw 100vw 0 0;
-    box-shadow: inset 0 0 4px
-        hsl(var(--blade-hue) 100% var(--blade-lightness) / 1),
-      0 0 1em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.8),
-      0 0 1.5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.7),
-      0 0 2em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.5),
-      0 0 3em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.3),
-      0 0 5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.2);
-  
-    transition: transform 50ms ease-out;
-    transform-origin: bottom;
-  }
-  
-  .blade::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: hsl(var(--blade-hue) 100% var(--blade-lightness));
-    border-radius: inherit;
-    filter: blur(0.5em);
-    opacity: 1;
-    animation: pulse linear 5s infinite;
-  }
-  
-  .blade::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: white;
-    border-radius: inherit;
-    z-index: 10;
-  }
-  
-  @keyframes pulse {
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
-   Turn lightsaber on and off
-  
-  #on-off:not(:checked) + .blade {
-    transform: scaleY(0);
-  }
-  
-  #on-off:checked + .blade {
-    transform: scaleY(1);
-  }
-  
-   change the color 
-  
-  #green:checked ~ .lightsaber {
-    --blade-hue: 120;
-  }
-  
-  #blue:checked ~ .lightsaber {
-    --blade-hue: 195;
-  }
-  
-  #yellow:checked ~ .lightsaber {
-    --blade-hue: 60;
-  }
-  
-  #purple:checked ~ .lightsaber {
-    --blade-hue: 290;
-  }
-  
-  #red:checked ~ .lightsaber {
-    --blade-hue: 360;
-  }
-  
-  #darksaber:checked ~ .lightsaber {
-    --blade-lightness: 100%;
-  }
-  
-  #darksaber:checked ~ .lightsaber .blade {
-    border-radius: 100% / 500px 10px 0 0;
-  }
-  
-  #darksaber:checked ~ .lightsaber .blade::before {
-    background: black;
-  }
-  
- play sound 
-  
-  embed {
-    display: none;
-    position: absolute;
-    opacity: 0;
-    pointer-events: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  #on-off:checked ~ embed {
-    display: block;
-  }
-  
- 
- **/
+.trans {
+  margin:0rem;
+}
